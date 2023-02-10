@@ -1,0 +1,37 @@
+
+Design choices:
+  - functions.cpp contains most of the user interface and the flow of the program while the files of bankBranch and prePaidCard include declarations and definitions of the functions and attributes related to these objects.
+
+  - We implement the blacklist and lock/unlock cards as an instance of a bankbranch. This way all bankbranches has access to the information which in turn can prevent fraud in the system as a whole. Furthermore, the functions we write for operating with these lists in the program can be reused for the bankBranches as well as the other way around.
+
+  - updated data is stored in the text file when we exit to reduce the number of times we open, read and write to the file
+
+  - to implement bankBranch intances and connect them with the corresponding textfile we used the code which has been commented out in the main.cpp file.
+
+
+Outline of program structure:
+  Two classes:
+  - prePaidCard
+  - bankBranch
+  
+  External functions:
+  - atmUser //choose admin or customer and move to sub menus
+  
+  
+  Class prePaidCard - Customer
+    Attributes:
+    - Balance
+    -loginString 
+    - etc.
+    
+    Functions:
+  
+  
+  Class BankBranch
+    Attributes:
+    - Array PrepaidCard
+    - Balance int
+    - etc.
+  
+    Functions:
+    int totalBalance(array PrepaidCard, ) //use it, in order to find out the total amount of money.
